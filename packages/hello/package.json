@@ -1,0 +1,62 @@
+{
+	"name": "{{ repo_name }}/hello",
+	"version": "0.0.1",
+	"description": "Example hello world package in the {{ repo_name }} repository.",
+	"license": "MIT",
+	"author": "{{ me }}",
+	"contributors": [],
+	"homepage": "https://github.com/{{ me }}/{{ {{ repo_name }} }}#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/{{ me }}/{{ {{ repo_name }} }}.git"
+	},
+	"bugs": {
+		"url": "https://github.com/{{ me }}/{{ {{ repo_name }} }}/issues"
+	},
+	"keywords": [
+		"solid"
+	],
+	"private": false,
+	"sideEffects": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"dist"
+	],
+	"type": "module",
+	"main": "dist/esm/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/types/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/esm/index.js",
+			"browser": "./dist/esm/index.js",
+			"require": "./dist/esm/index.js",
+			"node": "./dist/esm/index.js"
+		}
+	},
+	"scripts": {
+		"dev": "pnpm run build -w",
+		"build": "rollup -c ../../configs/rollup.config.ts",
+		"test": "pnpm run test:client && pnpm run test:ssr",
+		"test:client": "jest --config jest.config.ts",
+		"test:ssr": "jest --config jest.config.ssr.ts",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^5.16.4",
+		"jest": "^28.1.1",
+		"jest-environment-jsdom": "^28.1.1",
+		"solid-testing-library": "^0.3.0",
+		"solid-js": "^1.4.4",
+		"ts-node": "^10.8.1",
+		"rollup": "^2.75.7",
+		"rollup-preset-solid": "^1.4.0",
+		"typescript": "^4.7.4"
+	},
+	"peerDependencies": {
+		"solid-js": "^1.4.4"
+	},
+	"packageManager": "pnpm@7.3.0"
+}
