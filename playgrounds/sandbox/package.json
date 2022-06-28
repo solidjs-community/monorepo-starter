@@ -1,5 +1,5 @@
 {
-	"name": "{{repo_name}}-playground-sandbox",
+	"name": "your-repository-name-playground-sandbox",
 	"version": "0.0.0",
 	"description": "",
 	"scripts": {
@@ -15,7 +15,7 @@
 		"vite-plugin-solid": "^2.2.6"
 	},
 	"dependencies": {
-		"@{{repo_name}}/hello": "^0.0.1",
+		"@your-repository-name/hello": "^0.0.1",
 		"solid-js": "^1.4.5"
 	}
 }

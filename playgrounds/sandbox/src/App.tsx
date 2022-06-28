@@ -1,5 +1,5 @@
 import type { Component } from "solid-js"
-import { Hello } from "@{{repo_name}}/hello"
+import { Hello } from "@your-repository-name/hello"
 
 import logo from "./logo.svg"
 import styles from "./App.module.css"

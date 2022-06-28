@@ -1,9 +1,9 @@
 {
-	"name": "{{repo_name}}-monorepo",
-	"description": "{{repo_desc}}",
+	"name": "your-repository-name-monorepo",
+	"description": "your-repository-desc",
 	"version": "0.0.1",
 	"license": "MIT",
-	"author": "{{me}}",
+	"author": "your-author-name",
 	"contributors": [],
 	"scripts": {
 		"build": "turbo run build --filter=!./playgrounds/*",
