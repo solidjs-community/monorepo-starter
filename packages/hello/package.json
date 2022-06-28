@@ -5,13 +5,13 @@
 	"license": "MIT",
 	"author": "your-author-name",
 	"contributors": [],
-	"homepage": "https://github.com/your-author-name/your-repository-name#readme",
+	"homepage": "https://github.com/your-nickname/your-repository-name#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/your-author-name/your-repository-name.git"
+		"url": "git+https://github.com/your-nickname/your-repository-name.git"
 	},
 	"bugs": {
-		"url": "https://github.com/your-author-name/your-repository-name/issues"
+		"url": "https://github.com/your-nickname/your-repository-name/issues"
 	},
 	"keywords": [
 		"solid"
