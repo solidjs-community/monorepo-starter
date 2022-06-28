@@ -1,8 +1,9 @@
 {
-	"name": "{{ repo_name }}-monorepo",
+	"name": "{{repo_name}}-monorepo",
+	"description": "{{repo_desc}}",
 	"version": "0.0.1",
 	"license": "MIT",
-	"author": "{{ me }}",
+	"author": "{{me}}",
 	"contributors": [],
 	"scripts": {
 		"build": "turbo run build --filter=!./playgrounds/*",
@@ -30,7 +31,9 @@
 		"rollup-preset-solid": "^1.4.0",
 		"taze": "^0.7.4",
 		"turbo": "^1.3.1",
-		"typescript": "^4.7.4"
+		"typescript": "^4.7.4",
+		"vite": "^2.9.13",
+		"vite-plugin-solid": "^2.2.6"
 	},
 	"packageManager": "pnpm@7.3.0"
 }

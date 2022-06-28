@@ -1,17 +1,17 @@
 {
-	"name": "{{ repo_name }}/hello",
+	"name": "@{{repo_name}}/hello",
 	"version": "0.0.1",
-	"description": "Example hello world package in the {{ repo_name }} repository.",
+	"description": "Example hello world package in the {{repo_name}} repository.",
 	"license": "MIT",
-	"author": "{{ me }}",
+	"author": "{{me}}",
 	"contributors": [],
-	"homepage": "https://github.com/{{ me }}/{{ {{ repo_name }} }}#readme",
+	"homepage": "https://github.com/{{me}}/{{repo_name}}#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/{{ me }}/{{ {{ repo_name }} }}.git"
+		"url": "git+https://github.com/{{me}}/{{repo_name}}.git"
 	},
 	"bugs": {
-		"url": "https://github.com/{{ me }}/{{ {{ repo_name }} }}/issues"
+		"url": "https://github.com/{{me}}/{{repo_name}}/issues"
 	},
 	"keywords": [
 		"solid"
