@@ -27,6 +27,10 @@ List of cli commands available from a project root.
 To use the commands, first install [pnpm](https://pnpm.io) and install dependencies with `pnpm i`.
 
 ```bash
+pnpm run dev
+# Builds all packages in watch mode, and starts all playgrounds
+# turbo run dev --parallel
+
 pnpm run build
 # Builds all the packages in the monorepo
 # turbo run build --filter=!./playgrounds/*
