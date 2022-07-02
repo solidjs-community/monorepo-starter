@@ -14,6 +14,7 @@
 		"format": "prettier -w \"packages/**/*.{js,ts,json,css,tsx,jsx,md}\" \"playgrounds/**/*.{js,ts,json,css,tsx,jsx,md}\"",
 		"changeset": "changeset",
 		"version-packages": "changeset version && pnpm i",
+		"ci:version": "changeset version && pnpm i --no-frozen-lockfile && git add .",
 		"release": "pnpm run build-test && changeset publish",
 		"update-deps": "taze -w -r && pnpm i"
 	},
