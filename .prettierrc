@@ -3,16 +3,8 @@
 	"tabWidth": 2,
 	"printWidth": 100,
 	"semi": false,
-	"singleQuote": false,
-	"useTabs": true,
+	"singleQuote": true,
+	"useTabs": false,
 	"arrowParens": "avoid",
-	"bracketSpacing": true,
-	"overrides": [
-		{
-			"files": "*.md",
-			"options": {
-				"useTabs": false
-			}
-		}
-	]
+	"bracketSpacing": true
 }

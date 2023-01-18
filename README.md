@@ -65,5 +65,5 @@ pnpm run release
 
 pnpm run update-deps
 # Updates all dependencies in the repository
-# taze -w -r && pnpm i
+# pnpm up -Lri
 ```

@@ -1,21 +1,20 @@
 {
-	"name": "your-repository-name-playground-sandbox",
-	"version": "0.0.0",
-	"description": "",
-	"scripts": {
-		"start": "vite",
-		"dev": "vite",
-		"build": "vite build",
-		"serve": "vite preview"
-	},
-	"license": "MIT",
-	"devDependencies": {
-		"typescript": "^4.7.4",
-		"vite": "^3.0.3",
-		"vite-plugin-solid": "^2.3.0"
-	},
-	"dependencies": {
-		"@your-repository-name/hello": "^0.0.1",
-		"solid-js": "^1.4.8"
-	}
+  "name": "your-repository-name-playground-sandbox",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4",
+    "vite-plugin-solid": "^2.5.0"
+  },
+  "dependencies": {
+    "@your-repository-name/hello": "^0.0.1",
+    "solid-js": "^1.6.9"
+  }
 }
