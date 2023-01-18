@@ -52,13 +52,12 @@
     "dev": "tsup --watch",
     "build": "tsup",
     "test": "pnpm run test:client && pnpm run test:ssr",
-    "test:client": "jest --config jest.config.ts",
-    "test:ssr": "jest --config jest.config.ssr.ts",
+    "test:client": "vitest -c ../../configs/vitest.config.ts",
+    "test:ssr": "pnpm run test:client --mode ssr",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "solid-js": "^1.6.9",
-    "solid-testing-library": "^0.5.0"
+    "solid-js": "^1.6.9"
   },
   "peerDependencies": {
     "solid-js": "^1.6.0"
