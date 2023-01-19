@@ -1,6 +1,8 @@
 name: Release
 
-on: [workflow_dispatch]
+on:
+  push:
+    branches: [main]
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -8,26 +10,22 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.4
 
-      - uses: pnpm/action-setup@v2.2.2
-
-      - name: Setup Node.js 17.x
-        uses: actions/setup-node@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
         with:
-          node-version: 17.x
-          cache: pnpm
+          node-version: 18
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --ignore-scripts
 
-      - name: Publish to npm
+      - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
+          version: pnpm run ci:version
           publish: pnpm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

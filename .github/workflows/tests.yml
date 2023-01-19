@@ -1,35 +1,31 @@
 name: Build and Test
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build:
-    runs-on: ${{ matrix.operating-system }}
-
-    strategy:
-      matrix:
-        node-version: [16.x, 17.x]
-        operating-system: [ubuntu-latest]
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.4
 
-      - uses: pnpm/action-setup@v2.2.2
-
-      - name: Setup Node.js environment ${{ matrix.node-version }}
+      - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: pnpm
+          node-version: 18
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --ignore-scripts
+
+      - name: Build all packages
+        run: pnpm build
 
       - name: Run Build and Tests
         run: pnpm run build-test
-
         env:
           CI: true
