@@ -5,6 +5,7 @@
   "license": "MIT",
   "author": "your-author-name",
   "contributors": [],
+  "private": true,
   "scripts": {
     "postinstall": "pnpm build",
     "dev": "pnpm run --parallel --filter ./packages/* dev",
