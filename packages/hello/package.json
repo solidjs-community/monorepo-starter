@@ -51,7 +51,7 @@
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup",
-    "test": "pnpm run test:client && pnpm run test:ssr",
+    "test": "concurrently pnpm:test:*",
     "test:client": "vitest -c ../../configs/vitest.config.ts",
     "test:ssr": "pnpm run test:client --mode ssr",
     "typecheck": "tsc --noEmit"

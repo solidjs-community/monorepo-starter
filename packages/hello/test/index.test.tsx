@@ -31,7 +31,7 @@ describe('Hello', () => {
   it('renders a hello component', () => {
     createRoot(() => {
       const container = (<Hello />) as HTMLDivElement
-      expect(container.innerHTML).toBe('<div>Hello World!</div>')
+      expect(container.outerHTML).toBe('<div>Hello World!</div>')
     })
   })
 
@@ -39,12 +39,12 @@ describe('Hello', () => {
     createRoot(dispose => {
       const [to, setTo] = createSignal('Solid')
       const container = (<Hello to={to()} />) as HTMLDivElement
-      expect(container.innerHTML).toBe('<div>Hello Solid!</div>')
+      expect(container.outerHTML).toBe('<div>Hello Solid!</div>')
       setTo('Tests')
 
       // rendering is async
       queueMicrotask(() => {
-        expect(container.innerHTML).toBe('<div>Hello Tests!</div>')
+        expect(container.outerHTML).toBe('<div>Hello Tests!</div>')
         dispose()
       })
     }))

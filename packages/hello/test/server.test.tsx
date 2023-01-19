@@ -1,5 +1,5 @@
-import { isServer, renderToString } from 'solid-js/web'
 import { describe, expect, it } from 'vitest'
+import { isServer, renderToString } from 'solid-js/web'
 import { Hello, createHello } from '../src'
 
 describe('environment', () => {
@@ -25,6 +25,6 @@ describe('createHello', () => {
 describe('Hello', () => {
   it('renders a hello component', () => {
     const string = renderToString(() => <Hello />)
-    expect(string).toBe('<div data-hk="0-0">Hello World!</div>')
+    expect(string).toBe('<div>Hello World!</div>')
   })
 })
