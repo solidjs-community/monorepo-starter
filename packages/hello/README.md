@@ -20,13 +20,13 @@ pnpm add @your-repository-name/hello
 ## How to use it
 
 ```ts
-import { createHello } from "@your-repository-name/hello"
+import { createHello } from '@your-repository-name/hello'
 
 const [hello, setHello] = createHello()
 
 hello() // => "Hello World!"
 
-setHello("Solid")
+setHello('Solid')
 
 hello() // => "Hello Solid!"
 ```
